@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jatin Sharma - Game Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .page {
+            width: 8.5in;
+            min-height: 11in;
+            margin: 30px auto;
+            padding: 0.75in;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #2c3e50;
+        }
+        
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        
+        .title-line {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            font-size: 11px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            color: #1d4ed8;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 16px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        /* Summary */
+        .summary-text {
+            font-size: 11.5px;
+            line-height: 1.7;
+            color: #374151;
+            text-align: justify;
+        }
+        
+        /* Items (Projects & Experience) */
+        .item {
+            margin-bottom: 20px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+            gap: 16px;
+        }
+        
+        .item-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+        
+        .item-date {
+            font-size: 10.5px;
+            color: #6b7280;
+            font-style: italic;
+            white-space: nowrap;
+        }
+        
+        .item-subtitle {
+            font-size: 10.5px;
+            color: #2563eb;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+        
+        .item-description {
+            font-size: 11px;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        .item ul {
+            margin-left: 20px;
+            margin-top: 4px;
+        }
+        
+        .item li {
+            font-size: 11px;
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 4px;
+        }
+        
+        .item li::marker {
+            color: #6b7280;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 14px;
+        }
+        
+        .degree-line {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+        
+        .institution-line {
+            font-size: 11px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        
+        /* Skills */
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .skill-category {
+            font-size: 11px;
+            line-height: 1.7;
+            color: #374151;
+        }
+        
+        .skill-label {
+            font-weight: 700;
+            color: #1a1a1a;
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+        
+        /* Two Column */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        
+        .subsection {
+            margin-bottom: 20px;
+        }
+        
+        .subsection-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .list-content {
+            font-size: 10.5px;
+            line-height: 1.7;
+            color: #374151;
+        }
+        
+        .list-content ul {
+            margin-left: 18px;
+        }
+        
+        .list-content li {
+            margin-bottom: 6px;
+        }
+        
+        .list-content li::marker {
+            color: #6b7280;
+        }
+        
+        /* Links */
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                page-break-after: always;
+            }
+            
+            .page:last-child {
+                page-break-after: auto;
+            }
+            
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">Jatin Sharma</h1>
+            <div class="title-line">Unity Developer | Gameplay Programmer</div>
+            <div class="contact-info">
+                Jaipur, Rajasthan, India<br>
+                <a href="mailto:jatin830sharma@gmail.com">jatin830sharma@gmail.com</a> • +91 98873 54581<br>
+                <a href="https://linkedin.com/in/jatinsharma0e0" target="_blank">linkedin.com/in/jatinsharma0e0</a> • 
+                <a href="https://github.com/jatinsharma0e0" target="_blank">github.com/jatinsharma0e0</a> • 
+                <a href="https://bit.ly/Jatin0e0" target="_blank">bit.ly/Jatin0e0</a>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+            <h2 class="section-title">Summary</h2>
+            <p class="summary-text">
+                Passionate Game Developer and Gameplay Programmer with strong expertise in Unity 3D, C#, and interactive game mechanics. Experienced in developing engaging gameplay systems, implementing player input mechanics, building intuitive UI/UX for games, and creating polished game experiences with animations and sound effects. Skilled in OOP concepts, player behaviors, enemy AI, health systems, collision detection, and optimizing game performance. Proven track record of building complete games from prototype to production-ready builds for Windows and Android platforms.
+            </p>
+        </div>
+
+        <!-- Game Projects -->
+        <div class="section">
+            <h2 class="section-title">Game Projects</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Street Runner – Endless Runner Game</div>
+                </div>
+                <div class="item-subtitle">Technologies: Unity 3D, C#</div>
+                <div class="item-description">
+                    Fully polished endless runner inspired by Subway Surfers with smooth animations, dynamic UI using UI Builder (Unity), sound effects, obstacle generation, score system, and player controls. Successfully deployed on Android platform.
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Maze Runner – First-Person Maze Game</div>
+                </div>
+                <div class="item-subtitle">Technologies: Unity 3D, C#</div>
+                <div class="item-description">
+                    First-person perspective maze navigation game implementing player movement, camera controls, collision detection, and procedural maze generation mechanics.
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Platformer Game Prototypes</div>
+                </div>
+                <div class="item-subtitle">Technologies: Unity 3D, C#, UI Builder</div>
+                <div class="item-description">
+                    Multiple 2D/3D platformer prototypes featuring Player Input System, Enemy AI behaviors, trap mechanics, health system, collectible coins, door interactions, Cinemachine camera, Canvas UI, and object-oriented programming implementation.
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Jungle Snake Game – Classic Arcade</div>
+                </div>
+                <div class="item-subtitle">Technologies: HTML5, CSS3, JavaScript</div>
+                <div class="item-description">
+                    Classic snake game with jungle theme. <a href="https://junglesnakegame.vercel.app/" target="_blank">Play here</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Flip Fusion – Memory Card Game</div>
+                </div>
+                <div class="item-subtitle">Technologies: HTML5, CSS3, JavaScript</div>
+                <div class="item-description">
+                    Interactive memory card matching game. <a href="https://flipfusion.vercel.app/" target="_blank">Play here</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Game Developer Intern – Exition Infotech</div>
+                    <div class="item-date">May 2025 – July 2025</div>
+                </div>
+                <ul>
+                    <li>Developed engaging game mechanics using Unity 3D and C#, focusing on gameplay systems and user interactions</li>
+                    <li>Designed and implemented game UI/UX layouts, menus, HUDs, and interactive elements using Unity UI Toolkit & Canvas System</li>
+                    <li>Collaborated on debugging and optimizing game performance for better player experience</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">AI/ML Trainee – Upflairs</div>
+                    <div class="item-date">March 2025 – April 2025</div>
+                </div>
+                <ul>
+                    <li>Gained experience in Python programming, machine learning concepts, and data visualization techniques</li>
+                    <li>Applied programming skills to build functional dashboards and UI elements for data-driven applications</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Java & Web Development Intern</div>
+                    <div class="item-date">August 2024 – September 2024</div>
+                </div>
+                <ul>
+                    <li>Built dynamic and interactive web applications using HTML, CSS, and JavaScript with clean UI implementations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <div class="degree-line">B.Tech in Computer Science Engineering with AI</div>
+                <div class="institution-line">Arya Institute of Engineering Technology & Management, Jaipur</div>
+                <div class="institution-line">2022 – 2026 (Expected)</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree-line">12th Grade (Senior Secondary)</div>
+                <div class="institution-line">The Cambridge School, Jaipur • 2022</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree-line">10th Grade (Secondary)</div>
+                <div class="institution-line">Ambassy Millennium Sr. Sec. School, Jaipur • 2020</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+        <!-- Technical Skills -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-list">
+                <div class="skill-category">
+                    <div class="skill-label">Game Development:</div>
+                    Unity 3D (Expert) • C# Programming • Gameplay Programming • OOP Concepts • Player Input System • Enemy AI & Behaviors • Physics & Collision • Health & Damage Systems • Animation Controllers • Cinemachine • Unity UI Toolkit • Particle Systems • Game Optimization
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-label">Programming & Tools:</div>
+                    C#, C++, Java, JavaScript • Python • Git & GitHub • Unity Canvas & UI Builder • Android Studio • Visual Studio • Windows & Android Build Deployment
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-label">Design & Soft Skills:</div>
+                    Game UI/UX Design • Level Design • Adobe Photoshop (Advanced) • Problem Solving • Debugging & Testing • Creativity • Team Collaboration • Communication • Leadership
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Section -->
+        <div class="two-column">
+            <div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Certifications</h3>
+                    <div class="list-content">
+                        <ul>
+                            <li>Game Development Internship (Exition Infotech)</li>
+                            <li>Programming for Problem Solving in C</li>
+                            <li>Programming in Java</li>
+                            <li>Adobe Photoshop Certification</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3 class="subsection-title">Languages</h3>
+                    <div class="list-content">
+                        Hindi (Native) • English (Upper-Intermediate B2)
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Hackathons & Achievements</h3>
+                    <div class="list-content">
+                        <ul>
+                            <li>Top 10 Team – Game Jam Jaipur 2026, Rajasthan DigiFest - TiE Global Summit 2026, JECC Sitapura, Jaipur (January 2026)</li>
+                            <li>3rd Place – Hack of House Hackathon (March 2025)</li>
+                            <li>Participant – DevSummit Hackathon, Jagannath University (June 2025)</li>
+                            <li>1st Runner-Up – The Music Mania (Flute Performance)</li>
+                            <li>Winner – Bridge-O-Mania Competition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
